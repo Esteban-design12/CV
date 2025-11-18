@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>PC Builder – Diseño interactivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="pcbuilder.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- NAV -->
+    <nav class="top-nav reveal-on-scroll">
+      <div class="brand">
+        <span class="brand-avatar">EM</span>
+        <span class="brand-name">PC Builder</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="page-link">Volver al portafolio</a>
+      </div>
+    </nav>
+
+    <!-- HERO EN REJILLA (MISMO ORDEN QUE TRUEQUE U) -->
+    <header class="hero grid-2 reveal-on-scroll">
+      <!-- Columna izquierda -->
+      <section class="hero-info">
+        <h1>PC Builder</h1>
+        <p class="tag">UI · DISEÑO INTERACTIVO</p>
+        <p class="hero-text">
+          PC Builder es una interfaz web pensada para ayudar al usuario a
+          elegir componentes y armar su propio PC. Incluye catálogo de piezas,
+          filtros, comparaciones y una sección de cuenta para gestionar pedidos.
+        </p>
+
+        <div class="hero-meta">
+          <div>
+            <h3>Rol</h3>
+            <p>Diseño UI, prototipo de interacción y maquetación front-end</p>
+          </div>
+          <div>
+            <h3>Tecnologías</h3>
+            <p>HTML/CSS/JS · Diseño inspirado en dashboards gaming</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columna derecha -->
+      <section class="hero-preview">
+        <div class="preview-card">
+          <p class="preview-label">Características principales</p>
+          <ul>
+            <li>Catálogo con tarjetas de componentes y etiquetas de uso.</li>
+            <li>Filtros por tipo de pieza, marca y presupuesto.</li>
+            <li>Sección “My Account” para perfil, pedidos y direcciones.</li>
+            <li>Estética oscura con acentos en verde neón.</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- MODELO DE DATOS & FLUJO -->
+      <section class="section reveal-on-scroll">
+        <h2>Modelo de datos & Flujo</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Entidades principales</h3>
+            <p>
+              Usuarios, Componentes (GPU, CPU, RAM, etc.), Carrito, Pedidos y
+              Direcciones de envío. Cada entidad se relaciona con el flujo de
+              compra y armado del PC.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Flujo del usuario</h3>
+            <p>
+              El usuario explora el catálogo, filtra componentes según sus
+              necesidades, añade piezas al carrito y finaliza el pedido desde
+              su cuenta, donde también puede revisar historiales.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- DISEÑO EN REJILLA -->
+      <section class="section reveal-on-scroll">
+        <h2>Diseño en rejilla</h2>
+        <div class="arch-grid">
+          <article class="card arch">
+            <h3>Home / Hero</h3>
+            <ul>
+              <li>Sección hero con mensaje principal y call-to-action.</li>
+              <li>Visuales de componentes para contextualizar el proyecto.</li>
+            </ul>
+          </article>
+
+          <article class="card arch">
+            <h3>Catálogo de componentes</h3>
+            <ul>
+              <li>
+                Rejilla de tarjetas con imagen del producto, nombre y usos.
+              </li>
+              <li>
+                Etiquetas como “4K Gaming”, “Budget” o “Creator” para orientar.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card arch">
+            <h3>Constructor de PC</h3>
+            <ul>
+              <li>Tabla donde cada fila representa un tipo de componente.</li>
+              <li>
+                Selección de piezas y resumen del costo total del ensamble.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card arch">
+            <h3>My Account</h3>
+            <ul>
+              <li>Panel con datos del usuario y formulario de edición.</li>
+              <li>Secciones para pedidos y direcciones guardadas.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- GALERÍA CON MODALES (SE MANTIENE) -->
+      <section class="section reveal-on-scroll" id="pcbuilder-galeria">
+        <h2>Galería de interfaces</h2>
+        <p class="hero-text">
+          Pantallas clave del proyecto: catálogo de componentes, página
+          principal y sección de cuenta.
+        </p>
+
+        <div class="pc-gallery-grid">
+          <!-- ITEM 1 -->
+          <button
+            class="pc-item"
+            data-title="Home"
+            data-meta="Exploración avanzada"
+            data-desc="Pantalla donde el usuario navega por la pagina  y explora las distintas secciones."
+          >
+            <img src="images/PCBUILDER1.png" alt="Catálogo PC Builder" />
+            <span class="pc-label">Explore components</span>
+          </button>
+
+          <!-- ITEM 2 -->
+          <button
+            class="pc-item"
+            data-title="My Account"
+            data-meta="Landing verde"
+            data-desc="Seccion de mi cuenta, donde aparece el nombre usuario registrado su correo direccion etc"
+          >
+            <img src="images/PCBUILDER2.png" alt="Home PC Builder" />
+            <span class="pc-label">Home principal</span>
+          </button>
+
+          <!-- ITEM 3 -->
+          <button
+            class="pc-item"
+            data-title="Assemble your PC"
+            data-meta="Seleccion de componentes"
+            data-desc="Sección destinada a la gestión de componentes a gusto del usuario."
+          >
+            <img src="images/PCBUILDER3.png" alt="Assemble your PC" />
+            <span class="pc-label">My Account</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MODAL (NO SE PIERDE) -->
+  <div class="modal" id="pc-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content pc-modal-content">
+      <button class="modal-close">×</button>
+      <h2 id="pc-modal-title" class="modal-title"></h2>
+      <p id="pc-modal-meta" class="modal-meta"></p>
+      <div class="modal-image-wrap">
+        <img id="pc-modal-image" src="" alt="" />
+      </div>
+      <p id="pc-modal-desc" class="modal-description"></p>
+    </div>
+  </div>
+
+  <!-- JS de modales -->
+  <script src="pcbuilder.js"></script>
+
+  <!-- JS global para scroll + transiciones -->
+  <script src="global-animations.js"></script>
+</body>
+</html>

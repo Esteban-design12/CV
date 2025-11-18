@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Verna – Galería de Arte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="verna.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- NAV -->
+    <nav class="top-nav">
+      <div class="brand">
+        <span class="brand-avatar">EM</span>
+        <span class="brand-name">Verna</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Volver al portafolio</a>
+      </div>
+    </nav>
+
+    <!-- HERO EN REJILLA (MISMO ORDEN QUE TRUEQUE U) -->
+    <header class="hero grid-2">
+      <!-- Columna izquierda -->
+      <section class="hero-info">
+        <h1>Verna</h1>
+        <p class="tag">SERIE PICTÓRICA · ANÁLISIS VISUAL</p>
+        <p class="hero-text">
+          Verna es una serie pictórica que combina figuras orgánicas con fondos
+          geométricos, explorando la tensión entre forma, color y simbolismo.
+          El sitio web funciona como galería digital donde cada obra tiene su
+          propia ficha y lectura guiada.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://jonathanagc117.github.io/VERNA/index.html"
+             target="_blank"
+             class="btn primary">
+            Ver demo
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div>
+            <h3>Rol</h3>
+            <p>Fotografía de obra y diseño de interfaz</p>
+          </div>
+          <div>
+            <h3>Tecnologías</h3>
+            <p>Wix Studio - HTML - CSS - JS</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columna derecha -->
+      <section class="hero-preview">
+        <div class="preview-card">
+          <p class="preview-label">Experiencia del sitio</p>
+          <ul>
+            <li>Galería de obras con tarjetas limpias y jerarquía clara.</li>
+            <li>Página de detalle con la pintura en formato protagonista.</li>
+            <li>Textos curatoriales que acompañan la lectura de la obra.</li>
+            <li>Diseño minimalista que prioriza la imagen y la textura.</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- MODELO DE DATOS & FLUJO -->
+      <section class="section">
+        <h2>Modelo de datos & Flujo</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Entidades principales</h3>
+            <p>
+              Obras (pinturas individuales), Series (conjuntos de obras),
+              Textos (análisis y descripciones) y Recursos visuales
+              (fotografías en alta resolución).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Flujo del usuario</h3>
+            <p>
+              El recorrido comienza en la galería general, sigue a la ficha de
+              cada obra y termina en la lectura guiada, donde se explican
+              elementos de composición, color y narrativa visual.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- DISEÑO EN REJILLA -->
+      <section class="section">
+        <h2>Diseño en rejilla</h2>
+        <div class="arch-grid">
+          <article class="card arch">
+            <h3>Home / Galería</h3>
+            <ul>
+              <li>Rejilla de tarjetas con miniatura de la obra.</li>
+              <li>Título y breve descripción debajo de cada pintura.</li>
+              <li>Jerarquía visual centrada en la imagen.</li>
+            </ul>
+          </article>
+
+          <article class="card arch">
+            <h3>Detalle de obra</h3>
+            <ul>
+              <li>
+                La obra se muestra a gran tamaño sobre fondo neutro.
+              </li>
+              <li>
+                Texto descriptivo y análisis formal en la parte inferior.
+              </li>
+              <li>
+                Botón para volver fácilmente a la galería principal.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card arch">
+            <h3>Lectura guiada</h3>
+            <ul>
+              <li>Tarjetas que destacan puntos clave de la composición.</li>
+              <li>
+                Comentarios sobre ritmo, figura-fondo y uso del color.
+              </li>
+              <li>
+                Pensado como recurso educativo y de divulgación.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card arch">
+            <h3>Navegación</h3>
+            <ul>
+              <li>Menú superior simple con acceso a series y contacto.</li>
+              <li>Diseño responsive para escritorio y móvil.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- GALERÍA CON MODALES (SE MANTIENE) -->
+      <section class="section" id="verna-galeria">
+        <h2>Galería de pantallas</h2>
+        <p class="hero-text">
+          Algunas de las pantallas clave del sitio Verna: lectura guiada,
+          detalle de obra y galería general.
+        </p>
+
+        <div class="gallery-grid">
+          <!-- ITEM 1 -->
+          <button
+            class="gallery-item"
+            data-title="Galería principal Verna"
+            data-meta="Análisis visual"
+            data-desc="Conjunto de obras de la serie organizadas en tarjetas verticales para recorrer la exposición."
+          >
+            <img src="images/verna.png" alt="Galería principal Verna" />
+            <span class="gallery-label">Galeria Principal</span>
+          </button>
+
+          <!-- ITEM 2 -->
+          <button
+            class="gallery-item"
+            data-title="Detalle de la obra"
+            data-meta="Ficha individual"
+            data-desc="Vista enfocada en la obra 'Sirena', con encuadre limpio y texto explicativo debajo."
+          >
+            <img src="images/verna2.png" alt="Detalle de obra " />
+            <span class="gallery-label">Detalle de obra</span>
+          </button>
+
+          <!-- ITEM 3 -->
+          <button
+            class="gallery-item"
+            data-title="Lectura Guiada"
+            data-meta="Rejilla de pinturas"
+            data-desc="Tarjetas que explican la obra resaltando formas, gestos y temperatura de color."
+          >
+            <img src="images/verna3.png" alt="Lectura Guiada" />
+            <span class="gallery-label">Lectura Guiada</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MODAL (NO SE PIERDE) -->
+  <div class="modal" id="verna-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close">×</button>
+      <h2 class="modal-title" id="verna-modal-title"></h2>
+      <p class="modal-meta" id="verna-modal-meta"></p>
+      <div class="modal-image-wrap">
+        <img id="verna-modal-image" src="" alt="" />
+      </div>
+      <p class="modal-description" id="verna-modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="verna.js"></script>
+  <script src="global-animations.js"></script>
+</body>
+</html>

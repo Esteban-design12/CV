@@ -1,0 +1,503 @@
+:root {
+  --bg: #050608;
+  --bg-elevated: #111318;
+  --bg-soft: #171922;
+  --accent: #f6b310;
+  --accent-soft: rgba(246, 179, 16, 0.12);
+  --text-main: #f6f6f7;
+  --text-muted: #a1a4b2;
+  --border-soft: #232532;
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --shadow-soft: 0 22px 45px rgba(0, 0, 0, 0.6);
+  --transition-fast: 180ms ease-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #22273a, #050608 50%, #000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+/* PAGE WRAPPER */
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* NAV */
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(5, 6, 8, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f6b310, #ff6a00);
+  color: #0b0b10;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: border-color var(--transition-fast),
+    background var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--text-main);
+  border-color: rgba(246, 179, 16, 0.9);
+  background: rgba(246, 179, 16, 0.08);
+}
+
+/* UTILIDADES GRID */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
+  gap: 24px;
+}
+
+/* HERO */
+
+.hero {
+  margin-top: 18px;
+  margin-bottom: 32px;
+}
+
+.hero-info h1 {
+  margin: 0 0 4px;
+  font-size: 1.8rem;
+}
+
+.tag {
+  margin: 0 0 12px;
+  color: #f6d387;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero-meta h3 {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.hero-meta p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* HERO PREVIEW */
+
+.hero-preview {
+  display: flex;
+  align-items: stretch;
+}
+
+.preview-card {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top left, #1f2334, #0d0f17);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 18px 18px 14px;
+  box-shadow: var(--shadow-soft);
+  font-size: 0.9rem;
+}
+
+.preview-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f6d387;
+  margin: 0 0 10px;
+}
+
+.preview-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+}
+
+/* BOTONES */
+
+.btn {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  background: #202230;
+  color: var(--text-main);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    background var(--transition-fast), border-color var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #f6b310, #ff6a00);
+  color: #0b0b10;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* SECCIONES */
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section h2 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.card {
+  background: #10121a;
+  border-radius: var(--radius-md);
+  padding: 14px 14px 12px;
+  border: 1px solid var(--border-soft);
+  font-size: 0.9rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Arquitectura en rejilla */
+
+.arch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.arch ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ==== GALERÍA PC BUILDER ======================================= */
+
+.pc-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.pc-item {
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out,
+    border-color 200ms ease-out;
+}
+
+.pc-item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: saturate(1.1);
+  transition: transform 220ms ease-out, filter 220ms ease-out;
+}
+
+.pc-label {
+  display: block;
+  padding: 10px 14px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #bbf7d0;
+}
+
+.pc-item::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.3), transparent 60%);
+  opacity: 0;
+  transition: opacity 220ms ease-out;
+  pointer-events: none;
+}
+
+.pc-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 45px 0 rgba(22, 163, 74, 0.8);
+  border-color: rgba(74, 222, 128, 0.8);
+  animation-play-state: paused;  /* pausa flotado */
+}
+
+.pc-item:hover::before {
+  opacity: 1;
+}
+
+.pc-item:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.25) brightness(1.05);
+}
+
+
+/* =========================================================
+   MODAL GENÉRICO – PC BUILDER (CENTRADO REAL)
+   ======================================================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;          /* se activa con .active */
+  z-index: 200;
+}
+
+.modal.active {
+  display: block;         /* usamos posicionamiento absoluto en el contenido */
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+/* AQUÍ VA LA MAGIA DEL CENTRADO */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* siempre al centro de la ventana */
+
+  background: #020617;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  width: calc(100% - 40px);
+
+  /* si el contenido es muy alto, aparece scroll DENTRO del modal */
+  max-height: 90vh;
+  overflow-y: auto;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+  opacity: 0;
+  animation: pc-modal-in 220ms ease-out forwards;
+}
+
+.modal-title {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+  color: #e5e7eb;
+}
+
+.modal-meta {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #22c55e;
+}
+
+.modal-image-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(31, 41, 55, 0.7);
+  margin-bottom: 10px;
+}
+
+.modal-image-wrap img {
+  display: block;
+  width: 100%;
+}
+
+.modal-description {
+  margin: 0;
+  color: #9ca3af;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: opacity 140ms ease-out;
+}
+
+.modal-close:hover {
+  opacity: 0.65;
+}
+
+@keyframes pc-modal-in {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -30%); /* mantiene el centro al final de la animación */
+  }
+}
+
+
+
+/* ==== FLOTADO PARA CARDS Y PC ITEMS =========================== */
+
+.card,
+.pc-item {
+  position: relative;
+  transform-origin: center center;
+  animation: cardFloat 12s ease-in-out infinite alternate;
+}
+
+@keyframes cardFloat {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(3px); }
+}
+
+.card:hover {
+  animation-play-state: paused;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================================
+   SCROLL REVEAL PARA TODAS LAS SECCIONES
+   ============================================ */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   TRANSICIÓN ENTRE PÁGINAS
+   ============================================ */
+
+body {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+}
+
+body.page-loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.page-leaving {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-preview {
+    order: -1;
+    margin-bottom: 14px;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trueque U – Efrain Murcia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="truequeu.css" />
+</head>
+<body>
+  <div class="page">
+    <nav class="top-nav">
+      <div class="brand">
+        <span class="brand-avatar">EM</span>
+        <span class="brand-name">Trueque U</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Volver al portafolio</a>
+      </div>
+    </nav>
+
+    <header class="hero grid-2">
+      <section class="hero-info">
+        <h1>Trueque U</h1>
+        <p class="tag">Plataforma de intercambio para estudiantes</p>
+        <p class="hero-text">
+          Trueque U es una plataforma ideada para que estudiantes universitarios puedan intercambiar, ofrecer o
+          vender materiales, libros y recursos académicos. La web apuesta por una interfaz intuitiva,
+          filtros por carrera/categoría, sistema de publicación de ofertas y conectividad entre usuarios.
+        </p>
+
+        <!-- ===== BOTÓN VER DEMO ===== -->
+        <div style="margin: 14px 0;">
+          <a href="https://estefrainmurcia.wixstudio.com/trueque-u" 
+             target="_blank" 
+             class="btn primary">
+            Ver demo
+          </a>
+        </div>
+        <!-- ========================== -->
+
+        <div class="hero-meta">
+          <div>
+            <h3>Rol</h3>
+            <p>Diseño UI/UX, maquetación frontend, prototipo de base de datos</p>
+          </div>
+          <div>
+            <h3>Tecnologías</h3>
+            <p>Wix Studio</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-preview">
+        <div class="preview-card">
+          <p class="preview-label">Módulos previstos</p>
+          <ul>
+            <li>Registro / Inicio de sesión de usuarios</li>
+            <li>Listado de publicaciones por categorías</li>
+            <li>Filtros por carrera, tipo de recurso, estado</li>
+            <li>Detalle del recurso + contacto entre usuarios</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="trueque-detalle">
+        <h2>Modelo de datos & Flujo</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Entidades principales</h3>
+            <p>
+              Usuarios (universitarios), Publicaciones (materiales/resources), Mensajes (interacción entre usuarios),
+              Intercambios / Transacciones.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Interfaz clave</h3>
+            <p>
+              Home con rejilla de ofertas, filtros desplegables, página de detalle con botón de “Contactar”,
+              panel de gestión del usuario (mis ofertas, favoritos, historial).
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Diseño en rejilla</h2>
+        <div class="features-grid">
+          <article class="card">
+            <h3>Home / Portal</h3>
+            <p>Rejilla de tarjetas con miniatura, título, categoría y botón de ver más.</p>
+          </article>
+          <article class="card">
+            <h3>Detalle de recurso</h3>
+            <p>Vista del recurso completo, imágenes, descripción, estado, y botón “Contactar”.</p>
+          </article>
+          <article class="card">
+            <h3>Publicar recurso</h3>
+            <p>Formulario para crear nueva oferta, elegir categoría/carrera, subir imagen, definir estado.</p>
+          </article>
+          <article class="card">
+            <h3>Perfil usuario</h3>
+            <p>Listado de mis ofertas, historial de intercambios, favoritos y opción de edición.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="truequeu.js"></script>
+  <script src="global-animations.js"></script>
+</body>
+</html>
